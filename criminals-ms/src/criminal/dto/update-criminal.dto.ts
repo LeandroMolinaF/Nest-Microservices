@@ -23,7 +23,7 @@ export class UpdateCriminalDto {
 
   @IsOptional()
   @IsString()
-  nationatily: string;
+  nationality: string;
 
   @IsOptional()
   @IsDate()

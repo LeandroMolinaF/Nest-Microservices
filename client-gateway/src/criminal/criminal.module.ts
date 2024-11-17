@@ -12,6 +12,11 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         transport: Transport.TCP,
         options: { host: 'localhost', port: 3001 },
       },
+      {
+        name: 'CRIMINAL_SERVICE_MIRROR',
+        transport: Transport.TCP,
+        options: { host: 'localhost', port: 3002 },
+      },
     ]),
   ],
 })

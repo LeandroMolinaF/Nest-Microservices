@@ -6,7 +6,7 @@ import { RpcException } from '@nestjs/microservices';
 
 @Injectable()
 export class CriminalService extends PrismaClient implements OnModuleInit {
-  private readonly logger = new Logger('ProductsService');
+  private readonly logger = new Logger('CriminalService');
 
   onModuleInit() {
     this.$connect();

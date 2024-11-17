@@ -1,0 +1,35 @@
+<div class="container-sm d-flex justify-content-center">
+<div class="col-md-6 col-lg-7 d-flex align-items-center">
+    <div class="card-body p-4 p-lg-10 text-black">
+
+        <div class="d-flex align-items-center">
+          <img src="https://uninews.datoslab.cl/static/img/universidades/uta.png" class="container-fluid "
+          style=" height: 70px; width: 200px;" alt="Logo">
+          <img src="https://sentai.uta.cl/wp-content/uploads/2017/01/logo-informatica-01.png" class="container-fluid"
+          style=" height: 50px; width: 200px;" alt="Logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Policia_de_Investigaciones_de_Chile.svg/1024px-Policia_de_Investigaciones_de_Chile.svg.png" class="container-fluid"
+          style=" height: 50px; width: 200px;" alt="Logo">
+        </div>
+
+        <div [formGroup]="registerForm" class="container">
+            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; padding-top: 30px">Inicie sesión</h5>
+
+            <div class="mb-4">
+              <input type="text" class="form-control" placeholder="Usuario" required formControlName="username"/>
+            </div>
+
+            <div class="mb-4">
+                <input  type="text" class="form-control" placeholder="Correo electrónico" required  formControlName="mail"/>
+              </div>
+
+            <div class="mb-4">
+              <input  type="password" class="form-control" placeholder="Contraseña" required  formControlName="password"/>
+            </div>
+
+            <div class="mb-4">
+              <button class="btn btn-primary" style = "background-color: #4d4d4d; border-color: #4d4d4d;" type="submit" (click)="register()">Registrarse</button>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

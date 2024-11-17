@@ -11,6 +11,7 @@ async function bootstrap() {
     new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }),
   );
   app.useGlobalFilters(new RpcCustomExceptionFilter());
+  app.enableCors();
   await app.listen(3000);
 
   logger.log('Gateway running on port 3000');

@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+<div class="table-responsive-sm container-xl mt-2" >
+    <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
+        <div class="d-flex gap-4">
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+              data-bs-target="#modalAddCriminal">
+              Agregar Criminal
+            </button>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        @for (criminal of criminals; track $index) {
+        <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDdIsK9GdElPNOm61bfdZbJ5kb3r6E1TS18Q&s" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{criminal.name}}</h5>
+                <p class="card-text">{{criminal.charges}}</p>
+                <a href="#" class="btn btn-primary">Ver detalles</a>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+<app-criminal-add></app-criminal-add>

@@ -1,0 +1,42 @@
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Policia_de_Investigaciones_de_Chile.svg/1024px-Policia_de_Investigaciones_de_Chile.svg.png"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 555px; width: 600px;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-10 text-black">
+
+                  <div class="d-flex align-items-center">
+                    <img src="https://uninews.datoslab.cl/static/img/universidades/uta.png" class="container-fluid "
+                    style=" height: 70px; width: 200px;" alt="Logo">
+                    <img src="https://sentai.uta.cl/wp-content/uploads/2017/01/logo-informatica-01.png" class="container-fluid"
+                    style=" height: 50px; width: 200px;" alt="Logo">
+                  </div>
+
+                  <div [formGroup]="loginForm" class="container">
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; padding-top: 30px">Inicie sesión</h5>
+
+                    <div class="mb-4">
+                        <input type="text" id="form2Example17" class="form-control" placeholder="Usuario" required formControlName="username"/>
+                      </div>
+
+                    <div class="mb-4">
+                        <input  type="password" id="form2Example27" class="form-control" placeholder="Contraseña" required  formControlName="password"/>
+                      </div>
+
+                    <div class="mb-4">
+                        <button class="btn btn-primary" style = "background-color: #4d4d4d; border-color: #4d4d4d;" type="submit" (click)="login()">Iniciar sesión</button>
+                    </div>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">¿No tienes una cuenta? <a href="register" class="link-primary">Regístrate</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

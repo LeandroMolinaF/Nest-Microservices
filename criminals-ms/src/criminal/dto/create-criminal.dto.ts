@@ -18,7 +18,7 @@ export class CreateCriminalDto {
 
   @IsNotEmpty()
   @IsString()
-  nationatily: string;
+  nationality: string;
 
   @IsNotEmpty()
   @IsDate()

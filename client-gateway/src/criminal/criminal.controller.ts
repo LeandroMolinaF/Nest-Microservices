@@ -18,6 +18,8 @@ import { UpdateCriminalDto } from './dto/update-criminal.dto';
 export class CriminalController {
   constructor(
     @Inject('CRIMINAL_SERVICE') private readonly criminalClient: ClientProxy,
+    @Inject('CRIMINAL_SERVICE_MIRROR')
+    private readonly criminalClientMirror: ClientProxy,
   ) {}
 
   @Post()
@@ -28,6 +30,15 @@ export class CriminalController {
       );
       return criminal;
     } catch (error) {
+      if (error.code === 'ECONNREFUSED') {
+        return this.criminalClientMirror
+          .send({ cmd: 'createCriminal' }, newCriminal)
+          .pipe(
+            catchError((err) => {
+              throw new RpcException(err);
+            }),
+          );
+      }
       throw new RpcException(error);
     }
   }
@@ -40,6 +51,16 @@ export class CriminalController {
       );
       return criminals;
     } catch (error) {
+      if (error.code === 'ECONNREFUSED') {
+        return this.criminalClientMirror
+          .send({ cmd: 'findAllCriminal' }, {})
+          .pipe(
+            catchError((err) => {
+              throw new RpcException(err);
+            }),
+          );
+      }
+
       throw new RpcException(error);
     }
   }
@@ -49,7 +70,13 @@ export class CriminalController {
     return this.criminalClient.send({ cmd: 'findOneCriminal' }, { id }).pipe(
       catchError((err) => {
         if (err.code === 'ECONNREFUSED') {
-          console.log('entre al if que queria');
+          return this.criminalClientMirror
+            .send({ cmd: 'findOneCriminal' }, { id })
+            .pipe(
+              catchError((err) => {
+                throw new RpcException(err);
+              }),
+            );
         }
         throw new RpcException(err);
       }),
@@ -75,6 +102,15 @@ export class CriminalController {
       );
       return criminal;
     } catch (error) {
+      if (error.code === 'ECONNREFUSED') {
+        return this.criminalClientMirror
+          .send({ cmd: 'updateCriminal' }, data)
+          .pipe(
+            catchError((err) => {
+              throw new RpcException(err);
+            }),
+          );
+      }
       throw new RpcException(error);
     }
   }
@@ -87,6 +123,15 @@ export class CriminalController {
       );
       return criminal;
     } catch (error) {
+      if (error.code === 'ECONNREFUSED') {
+        return this.criminalClientMirror
+          .send({ cmd: 'removeCriminal' }, id)
+          .pipe(
+            catchError((err) => {
+              throw new RpcException(err);
+            }),
+          );
+      }
       throw new RpcException(error);
     }
   }
