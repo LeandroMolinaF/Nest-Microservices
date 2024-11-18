@@ -1,13 +1,19 @@
 <app-navbar></app-navbar>
 
-<div class="container-xl mt-4">
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalAddCriminal">
-      Agregar Criminal
+<div class="text-white text-center py-3 mt-5" style="background-color: #00234c;">
+  <h1>CRIMINALES MÁS BUSCADOS DE LA GALAXIA</h1>
+</div>
+
+<div class="text-center bg-white shadow">
+  <p class="fw-normal fs-5 py-3 px-5 mx-5">Conoce a los fugitivos más peligrosos del cosmos, individuos cuyas acciones han puesto en peligro la paz intergaláctica. Desde piratas espaciales hasta conspiradores planetarios, estos criminales representan una amenaza para el equilibrio del universo.</p>
+
+</div>
+<div class="container-xl my-4">
+  <div class="d-flex justify-content-end align-items-center ">
+    <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#modalAddCriminal">
+      Ingresar informacion de un criminal
     </button>
   </div>
-
-  <h1 class="my-2">CRIMINALES MAS BUSCADOS DE LA GALAXIA</h1>
 
   <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-4 mt-2">
     <div class="col" *ngFor="let criminal of criminals; let i = index">

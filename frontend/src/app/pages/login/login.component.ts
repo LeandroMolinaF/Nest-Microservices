@@ -28,7 +28,7 @@ export class LoginComponent {
 
     this.authService.login(user).subscribe({
       next: () => {
-        this.router.navigateByUrl('criminals');
+        this.router.navigateByUrl('home');
       },
       error: (error) => {
         alert(error.error.message);

@@ -1,10 +1,8 @@
-/* Contenedor general de la sección (para evitar desbordamiento) */
 .institution-section {
   position: relative;
-  overflow: hidden; /* Evita que el contenido que se mueve fuera del contenedor sea visible */
+  overflow: hidden;
 }
 
-/* Animación de deslizamiento desde la izquierda para la imagen */
 @keyframes slideInLeft {
     from {
       transform: translateX(-100%);
@@ -16,7 +14,6 @@
     }
 }
 
-/* Animación de deslizamiento desde la derecha para el texto */
 @keyframes slideInRight {
     from {
       transform: translateX(100%);
@@ -28,7 +25,6 @@
     }
 }
 
-/* Estilos para la imagen de la institución */
 .institution-image-container {
     animation: slideInLeft 1s ease-out;
 }
@@ -39,7 +35,10 @@
     object-fit: cover;
 }
 
-/* Estilos para el texto sobre la institución */
 .institution-text {
     animation: slideInRight 1s ease-out;
+}
+
+.border-primary{
+  border-color:#00234c !important;
 }
