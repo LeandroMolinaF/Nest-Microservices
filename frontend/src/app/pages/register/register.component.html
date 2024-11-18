@@ -1,34 +1,48 @@
-<div class="container-sm d-flex justify-content-center">
-<div class="col-md-6 col-lg-7 d-flex align-items-center">
-    <div class="card-body p-4 p-lg-10 text-black">
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://dotesports.com/wp-content/uploads/2023/09/CS2_header.jpg'); background-size: cover; background-position: center; filter: brightness(50%)">
+  </div>
 
-        <div class="d-flex align-items-center">
-          <img src="https://uninews.datoslab.cl/static/img/universidades/uta.png" class="container-fluid "
-          style=" height: 70px; width: 200px;" alt="Logo">
-          <img src="https://sentai.uta.cl/wp-content/uploads/2017/01/logo-informatica-01.png" class="container-fluid"
-          style=" height: 50px; width: 200px;" alt="Logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Policia_de_Investigaciones_de_Chile.svg/1024px-Policia_de_Investigaciones_de_Chile.svg.png" class="container-fluid"
-          style=" height: 50px; width: 200px;" alt="Logo">
+  <div class="col-md-6 col-lg-7">
+    <div class="card shadow-lg rounded border border-4 border-primary">
+      <div class="card-body p-5">
+        <!-- Logos -->
+        <div class="d-flex justify-content-center align-items-center mb-4">
+          <img src="https://i.pinimg.com/736x/c5/64/85/c56485635bd44e47da49e2bc12a3cbe2.jpg" 
+               class="img-fluid mx-3" style="height: 120px; width: auto;" alt="Logo UTA">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHX3whM-idI1U8FCAKfdZ8kGM4POVA3UVIZA&s" 
+               class="img-fluid mx-3" style="height: 70px; width: auto;" alt="Logo Informática">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Polic%C3%ADa_de_Investigaciones_de_Chile_%28PDI%29_01.jpg" 
+               class="img-fluid mx-3" style="height: 100px; width: auto;" alt="Logo PDI">
         </div>
 
-        <div [formGroup]="registerForm" class="container">
-            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; padding-top: 30px">Inicie sesión</h5>
+        <!-- Formulario de Registro -->
+        <div [formGroup]="registerForm" class="text-center">
+          <h5 class="fw-normal mb-3 pb-3 pt-5" style="letter-spacing: 1px;">Registro de Usuario</h5>
 
-            <div class="mb-4">
-              <input type="text" class="form-control" placeholder="Usuario" required formControlName="username"/>
-            </div>
+          <!-- Campo de Usuario -->
+          <div class="mb-4">
+            <input type="text" class="form-control" placeholder="Nombre de usuario" required formControlName="username" />
+          </div>
 
-            <div class="mb-4">
-                <input  type="text" class="form-control" placeholder="Correo electrónico" required  formControlName="mail"/>
-              </div>
+          <!-- Campo de Correo -->
+          <div class="mb-4">
+            <input type="email" class="form-control" placeholder="Correo electrónico" required formControlName="mail" />
+          </div>
 
-            <div class="mb-4">
-              <input  type="password" class="form-control" placeholder="Contraseña" required  formControlName="password"/>
-            </div>
+          <!-- Campo de Contraseña -->
+          <div class="mb-4">
+            <input type="password" class="form-control" placeholder="Contraseña" required formControlName="password" />
+          </div>
 
-            <div class="mb-4">
-              <button class="btn btn-primary" style = "background-color: #4d4d4d; border-color: #4d4d4d;" type="submit" (click)="register()">Registrarse</button>
-            </div>
+          <!-- Botón de Registro -->
+          
+            <!-- Botón de Registrarse a la izquierda -->
+            <button class="btn btn-primary mt-4 mb-4" style="background-color: #00234c; border-color: #00234c;" type="submit" (click)="register()">Registrarse</button>
+            
+            <!-- Enlace de Iniciar sesión centrado -->
+            <p class="small fw-bold pt-1 mb-0 mx-auto">¿Ya tienes una cuenta? <a href="login" class="link-warning">Inicia sesión</a></p>
+          
+        </div>
       </div>
     </div>
   </div>

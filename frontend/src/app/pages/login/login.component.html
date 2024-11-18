@@ -1,24 +1,27 @@
-<div class="container py-5 h-100">
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://www.radiofestival.cl/wp-content/uploads/2021/03/080_1091-660x330.jpg'); background-size: cover; background-position: center; filter: brightness(50%)">
+  </div>
+
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
-        <div class="card" style="border-radius: 1rem;">
+        <div class="card border border-4 border-primary bg-light" style="border-radius: 1rem;">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Policia_de_Investigaciones_de_Chile.svg/1024px-Policia_de_Investigaciones_de_Chile.svg.png"
-                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 555px; width: 600px;" />
+              <img src="https://pbs.twimg.com/profile_images/1775238617612288000/hQANGYQX_400x400.jpg"
+                alt="login form" class="img-fluid" style="border-radius: 0.5rem 0 0 0.5rem; height: 555px; width: 600px;" />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
-              <div class="card-body p-4 p-lg-10 text-black">
+              <div class="d-flex flex-column justify-content-center card-body p-4 p-lg-10 text-black bg-light" style="height: 95%;">
 
                   <div class="d-flex align-items-center">
-                    <img src="https://uninews.datoslab.cl/static/img/universidades/uta.png" class="container-fluid "
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ08TY5CZxm72djaqpBWPcmryfoMoafjnv8A&s" class="container-fluid "
                     style=" height: 70px; width: 200px;" alt="Logo">
-                    <img src="https://sentai.uta.cl/wp-content/uploads/2017/01/logo-informatica-01.png" class="container-fluid"
+                    <img src="https://4evergaming.com.ar/images/games-icons/counter-strike16-large-logo.png" class="container-fluid"
                     style=" height: 50px; width: 200px;" alt="Logo">
                   </div>
 
-                  <div [formGroup]="loginForm" class="container">
-                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; padding-top: 30px">Inicie sesión</h5>
+                  <div [formGroup]="loginForm" class="container text-center ">
+                    <h5 class="fw-normal mb-3 pb-3 pt-5" style="letter-spacing: 1px;">Inicie sesión</h5>
 
                     <div class="mb-4">
                         <input type="text" id="form2Example17" class="form-control" placeholder="Usuario" required formControlName="username"/>
@@ -29,9 +32,9 @@
                       </div>
 
                     <div class="mb-4">
-                        <button class="btn btn-primary" style = "background-color: #4d4d4d; border-color: #4d4d4d;" type="submit" (click)="login()">Iniciar sesión</button>
+                        <button class="btn btn-primary" style = "background-color: #00234c; border-color: #00234c;" type="submit" (click)="login()">Iniciar sesión</button>
                     </div>
-                    <p class="small fw-bold mt-2 pt-1 mb-0">¿No tienes una cuenta? <a href="register" class="link-primary">Regístrate</a></p>
+                    <p class="small fw-bold mt-2 pt-1 mb-0 ">¿No tienes una cuenta? <a href="register" class="link-warning">Regístrate</a></p>
                 </div>
               </div>
             </div>

@@ -4,11 +4,12 @@ import { Criminal } from '../../core/models/criminal.interface';
 import { HttpClientModule } from '@angular/common/http';
 import { CriminalAddComponent } from "../criminal-add/criminal-add.component";
 import { NavbarComponent } from "../../shared/components/navbar/navbar.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-criminal-list',
   standalone: true,
-  imports: [HttpClientModule, CriminalAddComponent, NavbarComponent],
+  imports: [HttpClientModule, CriminalAddComponent, NavbarComponent, CommonModule],
   templateUrl: './criminal-list.component.html',
   styleUrl: './criminal-list.component.css'
 })

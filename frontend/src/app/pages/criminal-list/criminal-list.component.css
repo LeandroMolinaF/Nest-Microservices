@@ -1,0 +1,30 @@
+/* General: Elimina todos los bordes redondeados de las tarjetas */
+.card {
+    border-radius: 0 !important;
+    overflow: hidden;
+}
+
+/* Header y footer con líneas finas */
+.card-header,
+.card-footer {
+    height: 3px !important; /* Grosor fino de 1px */
+    background-color: #00234c !important; /* Asegura color negro */
+    border: none !important; /* Elimina bordes adicionales */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin padding */
+}
+
+
+/* Ajuste para imágenes */
+.card img {
+    border-radius: 0 !important;
+    object-fit: cover; /* Garantiza que la imagen se adapte bien */
+}
+
+.btn-primary{
+    background-color: #00234c !important;
+}
+
+.justify-text {
+    text-align: justify !important;
+  }

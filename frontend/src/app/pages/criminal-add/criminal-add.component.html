@@ -1,76 +1,68 @@
 <div class="modal fade" id="modalAddCriminal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" [formGroup]="criminalForm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Criminal</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="mb-3">
+  <div class="modal-dialog modal-dialog-centered modal-lg" [formGroup]="criminalForm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Criminal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Columna 1 -->
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="name" placeholder="Nombre Completo">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="name" placeholder="Nombre Completo">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Género</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="gender" placeholder="Género">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="gender" placeholder="Género">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Nacionalidad</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="nationality" placeholder="Nacionalidad">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="nationality" placeholder="Nacionalidad">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Fecha de nacimiento</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="dateOfBirth" placeholder="2024-12-01">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="dateOfBirth" placeholder="2024-12-01">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Lugar de nacimiento</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="placeOfBirth" placeholder="Arica, Chile">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="placeOfBirth" placeholder="Arica, Chile">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Altura</label>
-            <input type="number" class="form-control" id="formGroupExampleInput"
-              formControlName="height" placeholder="1.11">
+            <input type="number" class="form-control" id="formGroupExampleInput" formControlName="height" placeholder="1.11">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Color de ojos</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="colourOfEyes" placeholder="Color de ojos">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="colourOfEyes" placeholder="Color de ojos">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Color de cabello</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="colourOfHair" placeholder="Color de cabello">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="colourOfHair" placeholder="Color de cabello">
           </div>
 
-          <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Caracteristicas adicionales</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="characteristics" placeholder="">
+          <div class="col-md-6 mb-3">
+            <label for="formGroupExampleInput" class="form-label">Características adicionales</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="characteristics" placeholder="">
           </div>
 
-          <div class="mb-3">
+          <div class="col-md-6 mb-3">
             <label for="formGroupExampleInput" class="form-label">Cargos</label>
-            <input type="text" class="form-control" id="formGroupExampleInput"
-              formControlName="charges" placeholder="Cargos">
+            <input type="text" class="form-control" id="formGroupExampleInput" formControlName="charges" placeholder="Cargos">
           </div>
-
         </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal" (click)="clearForm()">Cancelar</button>
-          <button class="btn btn-primary" [disabled]="!criminalForm.valid" (click)="createCriminal()">Registrar</button>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal" (click)="clearForm()">Cancelar</button>
+        <button class="btn btn-primary" [disabled]="!criminalForm.valid" (click)="createCriminal()">Registrar</button>
       </div>
     </div>
   </div>
+</div>
