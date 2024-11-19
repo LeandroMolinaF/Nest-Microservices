@@ -1,0 +1,142 @@
+<div class="modal fade" id="modalCriminalDetails" tabindex="-1" aria-labelledby="criminalDetailsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 rounded-3 shadow-lg">
+        <div class="modal-header bg-primary text-white border-0 rounded-top">
+          <h1 class="modal-title fs-5" id="criminalDetailsLabel">Detalles del Criminal</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="criminalForm">
+            <div class="row">
+              <!-- Nombre -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Nombre Completo</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="name" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.name || 'Sin datos'" 
+                  placeholder="Nombre Completo">
+              </div>
+  
+              <!-- Género -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Género</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="gender" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.gender || 'Sin datos'" 
+                  placeholder="Género">
+              </div>
+  
+              <!-- Nacionalidad -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Nacionalidad</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="nationality" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.nationality || 'Sin datos'" 
+                  placeholder="Nacionalidad">
+              </div>
+  
+              <!-- Fecha de nacimiento -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Fecha de nacimiento</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="dateOfBirth" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.dateOfBirth ? (criminal!.dateOfBirth | date: 'yyyy-MM-dd' : 'UTC') : 'Sin datos'" 
+                  placeholder="Fecha de nacimiento">
+              </div>
+  
+              <!-- Lugar de nacimiento -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Lugar de nacimiento</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="placeOfBirth" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.placeOfBirth || 'Sin datos'" 
+                  placeholder="Lugar de nacimiento">
+              </div>
+  
+              <!-- Altura -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Altura (m)</label>
+                <input 
+                  type="number" 
+                  class="form-control" 
+                  formControlName="height" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.height || 'Sin datos'" 
+                  placeholder="Altura">
+              </div>
+  
+              <!-- Color de ojos -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Color de ojos</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="colourOfEyes" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.colourOfEyes || 'Sin datos'" 
+                  placeholder="Color de ojos">
+              </div>
+  
+              <!-- Color de cabello -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Color de cabello</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="colourOfHair" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.colourOfHair || 'Sin datos'" 
+                  placeholder="Color de cabello">
+              </div>
+  
+              <!-- Características -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Características adicionales</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="characteristics" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.characteristics || 'Sin datos'" 
+                  placeholder="Características adicionales">
+              </div>
+  
+              <!-- Cargos -->
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Cargos</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="charges" 
+                  [readonly]="!isEditing" 
+                  [value]="criminal!.charges || 'Sin datos'" 
+                  placeholder="Cargos">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button *ngIf="!isEditing" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button *ngIf="isEditing" class="btn btn-secondary" (click)="cancelEdit()">Cancelar</button>
+          <button *ngIf="!isEditing" class="btn btn-primary" (click)="enableEdit()">Editar</button>
+          <button *ngIf="isEditing" class="btn btn-warning text-white" (click)="saveChanges()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

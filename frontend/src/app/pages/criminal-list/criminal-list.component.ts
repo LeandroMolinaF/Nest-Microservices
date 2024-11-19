@@ -5,11 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { CriminalAddComponent } from "../criminal-add/criminal-add.component";
 import { NavbarComponent } from "../../shared/components/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
+import { CriminalDetailComponent } from '../criminal-detail/criminal-detail.component';
 
 @Component({
   selector: 'app-criminal-list',
   standalone: true,
-  imports: [HttpClientModule, CriminalAddComponent, NavbarComponent, CommonModule],
+  imports: [HttpClientModule, CriminalAddComponent, NavbarComponent, CommonModule, CriminalDetailComponent],
   templateUrl: './criminal-list.component.html',
   styleUrl: './criminal-list.component.css'
 })
@@ -23,11 +24,17 @@ export class CriminalListComponent implements OnInit, OnDestroy  {
 
   public criminals: Criminal[] = [];
 
-
+  public crimz!: Criminal;
 
   public getAllCriminals() {
     this.criminalService.getAllCriminals().subscribe((criminals) => {
       this.criminals = criminals;
+      console.log(criminals)
     });
   }
+
+  public detail(criminal: Criminal){
+    this.crimz = criminal
+  }
+
 }

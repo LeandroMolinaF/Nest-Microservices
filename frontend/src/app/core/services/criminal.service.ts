@@ -22,4 +22,8 @@ export class CriminalService {
   public createCriminal(criminal: CriminalRegister): Observable<Criminal> {
     return this.http.post<Criminal>(this.apiUrl, criminal);
   }
+
+  public updateCriminal(id:number, criminal: Criminal): Observable<Criminal> {
+    return this.http.patch<Criminal>(`${this.apiUrl}/${id}`, criminal);
+  }
 }
