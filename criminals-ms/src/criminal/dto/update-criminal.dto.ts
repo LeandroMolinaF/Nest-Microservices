@@ -1,3 +1,4 @@
+import { Type } from 'class-transformer';
 import {
   IsDate,
   IsNotEmpty,
@@ -27,7 +28,9 @@ export class UpdateCriminalDto {
 
   @IsOptional()
   @IsDate()
+  @Type(() => Date)
   dateOfBirth: Date;
+
 
   @IsOptional()
   @IsString()

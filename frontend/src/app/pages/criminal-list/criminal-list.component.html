@@ -37,4 +37,4 @@
 </div>
 
 <app-criminal-add></app-criminal-add>
-<app-criminal-detail [criminal]="crimz" ></app-criminal-detail>
+<app-criminal-detail [criminal]="crimz" (updateCriminals)="updateCriminalList($event)" ></app-criminal-detail>

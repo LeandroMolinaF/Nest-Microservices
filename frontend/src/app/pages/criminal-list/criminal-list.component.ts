@@ -37,4 +37,11 @@ export class CriminalListComponent implements OnInit, OnDestroy  {
     this.crimz = criminal
   }
 
+  public updateCriminalList(updatedCriminal: any) {
+    const index = this.criminals.findIndex(c => c.id === updatedCriminal.id);
+    if (index !== -1) {
+      this.criminals[index] = { ...updatedCriminal };
+    }
+  }
+
 }

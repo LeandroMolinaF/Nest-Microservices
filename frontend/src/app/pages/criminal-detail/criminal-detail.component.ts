@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
+import { Component, Input, SimpleChanges, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { Criminal } from '../../core/models/criminal.interface';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -14,6 +14,8 @@ import { CriminalService } from '../../core/services/criminal.service';
 export class CriminalDetailComponent implements AfterViewInit {
 
   @Input() criminal!: Criminal;
+  @Output() updateCriminals = new EventEmitter<any>()
+
 
   criminalForm: FormGroup;
   isEditing = false;
@@ -72,6 +74,7 @@ export class CriminalDetailComponent implements AfterViewInit {
       this.criminalService.updateCriminal(this.criminal.id, criminalEdit).subscribe(result => {
         console.log(result);
         this.isEditing = false;
+        this.updateCriminals.emit(result);
       });
     }
   }

@@ -52,7 +52,6 @@
                   class="form-control" 
                   formControlName="dateOfBirth" 
                   [readonly]="!isEditing" 
-                  [value]="criminal!.dateOfBirth ? (criminal!.dateOfBirth | date: 'yyyy-MM-dd' : 'UTC') : 'Sin datos'" 
                   placeholder="Fecha de nacimiento">
               </div>
   
