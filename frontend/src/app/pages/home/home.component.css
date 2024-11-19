@@ -1,44 +1,30 @@
-.institution-section {
-  position: relative;
+.border-primary{
+  border-color:#00234c !important;
+}
+
+.text-primary{
+  color:#00234c !important;
+}
+
+/* General: Elimina todos los bordes redondeados de las tarjetas */
+.card {
+  border-radius: 0 !important;
   overflow: hidden;
 }
 
-@keyframes slideInLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+/* Header y footer con líneas finas */
+.card-header,
+.card-footer {
+  height: 3px !important; /* Grosor fino de 1px */
+  background-color: #00234c !important; /* Asegura color negro */
+  border: none !important; /* Elimina bordes adicionales */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin padding */
 }
 
-@keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-}
 
-.institution-image-container {
-    animation: slideInLeft 1s ease-out;
-}
-
-.institution-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.institution-text {
-    animation: slideInRight 1s ease-out;
-}
-
-.border-primary{
-  border-color:#00234c !important;
+/* Ajuste para imágenes */
+.card img {
+  border-radius: 0 !important;
+  object-fit: cover; /* Garantiza que la imagen se adapte bien */
 }

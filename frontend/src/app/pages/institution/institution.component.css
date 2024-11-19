@@ -1,0 +1,48 @@
+.institution-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+  }
+  
+  @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+  }
+  
+  .institution-image-container {
+      animation: slideInLeft 1s ease-out;
+  }
+  
+  .institution-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+  
+  .institution-text {
+      animation: slideInRight 1s ease-out;
+  }
+  
+  .border-primary{
+    border-color:#00234c !important;
+  }
+  
+  .text-primary{
+    color:#00234c !important;
+  }

@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
-import { CriminalService } from '../../core/services/criminal.service';
-import { Criminal } from '../../core/models/criminal.interface';
-import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-institution',
   standalone: true,
-  imports: [NavbarComponent, CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  imports: [NavbarComponent],
+  templateUrl: './institution.component.html',
+  styleUrl: './institution.component.css'
 })
-export class HomeComponent implements OnInit {
+export class InstitutionComponent {
   crimes = [
     {
       title: 'Robo de Grandes Dimensiones',
@@ -34,26 +31,15 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  constructor(
-    private router: Router,
-    private criminalService: CriminalService
-  ) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.username = sessionStorage.getItem('token')!.toUpperCase()
-    this.getAllCriminals()
   }
 
   username: string = "";
-  criminals: Criminal[] = []
 
   goToCriminals() {
     this.router.navigate(['/criminals']);
-  }
-
-  public getAllCriminals() {
-    this.criminalService.getAllCriminals().subscribe((criminals) => {
-      this.criminals = criminals;
-    });
   }
 }

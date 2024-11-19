@@ -1,73 +1,97 @@
 <app-navbar></app-navbar>
-<div class="container-fluid p-0 mt-5">
-    <div class="row align-items-center institution-section bg-white">
-      <div class="col-md-7 p-0 institution-image-container">
-        <img src="https://www.escuelapdi.cl/par/2020/05/EDIFICIO-scaled.jpg" class="img-fluid institution-image" alt="Imagen de la Institución" style="height: 800px; width: 1900px;">
-      </div>
-      <div class="col-md-5 p-5 institution-text">
-        <h1 class="display-4">Institución de Seguridad Pública</h1>
-        <p class="lead">
-          Somos una institución comprometida con la seguridad y el bienestar de la ciudadanía. Nuestra misión es garantizar la paz mediante la resolución de crímenes y mantener el orden público.
-        </p>
-      </div>
+
+<div class="container-fluid p-0">
+  <!-- Mensaje de bienvenida -->
+  <div class="row">
+    <div class="col-5 mt-5 text-center text-white py-3" style="background-color: #00234c;">
+      <h2 class="display-5 fw-semibold">BIENVENIDO DE VUELTA</h2>
     </div>
-  
+    <div class="col-7 mt-5 bg-white text-start ps-5 text-primary py-3 border border-2 border-primary">
+      <h2 class="display-5 fw-semibold">{{ username }}</h2>
+    </div>
+  </div>
 
-    <div class="text-white text-center py-3 mt-5 mb-3" style="background-color: #00234c;">
-        <h2>ULTIMOS CRIMENES RESUELTOS</h2>
+  <!-- Mensaje de felicitaciones y estadísticas personales -->
+  <div class="row align-items-stretch mt-5">
+    <!-- Mensaje de felicitaciones -->
+    <div
+      class="col-md-6 text-center text-white py-5 d-flex flex-column justify-content-center"
+      style="background-color: #00234c;"
+    >
+      <h3 class="fw-semibold">¡GRACIAS POR TU TRABAJO, {{ username }}!</h3>
+      <p class="mt-3">
+        Por tu arduo trabajo y dedicación, hemos logrado grandes avances en la lucha contra el crimen. ¡Eres un verdadero héroe!
+      </p>
+      <img 
+        src="https://i.pinimg.com/originals/95/13/73/951373784650914be6794e6c7615f6c1.webp" 
+        alt="Ícono de éxito" 
+        class="img-fluid mt-4 h-100 mx-auto rounded"
+        style=" object-fit: cover;"
+      />
     </div>
 
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-12 my-4 bg-white border border-2 border-primary">
-          <div class="row align-items-center">
-            <div class="col-md-6 px-0">
-              <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/A-Heist-in-GTA-Online.jpg" class="img-fluid" alt="Crimen Resuelto 1" style="height: 400px; width: 800px">
+    <div class="col-md-6 bg-light py-4">
+      <div class="container h-100 d-flex flex-column justify-content-center">
+        <h3 class="text-center text-primary mb-4">Estadísticas Personales</h3>
+        <div class="row text-center">
+          <div class="col-md-6">
+            <div class="border border-primary rounded py-3 mb-3">
+              <h4 class="text-primary">Asaltos Frustrados</h4>
+              <p class="display-5 fw-bold">15</p>
             </div>
-            <div class="col-md-6">
-              <h4 class="mb-5">Robo al Banco Pacific Standard Evitado</h4>
-              <p>Uno de nuestros mayores logros fue detener en el acto un asalto al Banco Pacific Standard. Gracias a nuestra rápida intervención y coordinación, neutralizamos a los responsables, aseguramos a los rehenes y recuperamos el dinero sustraído, garantizando la seguridad de todos los presentes.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="border border-primary rounded py-3 mb-3">
+              <h4 class="text-primary">Investigaciones Realizadas</h4>
+              <p class="display-5 fw-bold">32</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="border border-primary rounded py-3 mb-3">
+              <h4 class="text-primary">Búsquedas Internacionales</h4>
+              <p class="display-5 fw-bold">8</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="border border-primary rounded py-3 mb-3">
+              <h4 class="text-primary">Capturas Exitosas</h4>
+              <p class="display-5 fw-bold">12</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="border border-primary rounded py-3 mb-3">
+              <h4 class="text-primary">Horas de Vigilancia</h4>
+              <p class="display-5 fw-bold">45</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="border border-primary rounded py-3 mb-3">
+              <h4 class="text-primary">Criminales Identificados</h4>
+              <p class="display-5 fw-bold">20</p>
             </div>
           </div>
         </div>
-  
-        <div class="col-12 my-4 bg-white border border-2 border-primary">
-          <div class="row align-items-center">
-            <div class="col-md-6 order-md-2 px-0">
-              <img src="https://i.ytimg.com/vi/ZaP8eD3SC-Y/maxresdefault.jpg" class="img-fluid" alt="Crimen Resuelto 2" style="height: 400px; width: 800px;">
-            </div>
-            <div class="col-md-6 bg-white">
-              <h4 class="mb-5">Bomba C4 Desactivada en Marruecos</h4>
-              <p>En una operación crítica, logramos desactivar una bomba C4 colocada en el centro de un pueblo en Marruecos. Nuestra rápida respuesta y trabajo conjunto evitaron una tragedia, salvando cientos de vidas y asegurando la tranquilidad de la comunidad.</p>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-12 my-4 bg-white border border-2 border-primary">
-          <div class="row align-items-center">
-            <div class="col-md-6 px-0">
-              <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/L3RDXAMAO5EC3BFFYZJ76L7JFY.jpg" class="img-fluid" alt="Crimen Resuelto 3" style="height: 400px; width: 800px;">
-            </div>
-            <div class="col-md-6">
-              <h4 class="mb-5">Desarticulación de una Red de Tráfico de Armas</h4>
-              <p>En una operación encubierta, desarticulamos una peligrosa red de tráfico de armas que operaba a nivel internacional. Durante la intervención, se incautaron grandes cantidades de armamento y municiones, evitando que llegaran a manos equivocadas y protegiendo a innumerables ciudadanos de potenciales amenazas.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 my-4 bg-white border border-2 border-primary">
-          <div class="row align-items-center">
-            <div class="col-md-6 order-md-2 px-0">
-              <img src="https://i.ytimg.com/vi/EM8wEjxoXrs/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGFAgVyhlMA8=&rs=AOn4CLDfWqFAvGCkk2loAKT3f5z_qOVzMw" class="img-fluid" alt="Crimen Resuelto 2" style="height: 400px; width: 800px;">
-            </div>
-            <div class="col-md-6 bg-white">
-              <h4 class="mb-5">Derrotamos el Plan de Control Mundial del Científico Doofendoofenshmirtz</h4>
-              <p>Gracias a la valiente intervención del Agente P, logramos frustrar los planes del excéntrico científico Doofendoofenshmirtz, quien intentaba tomar el control mundial con su último invento. La operación fue un éxito, asegurando la paz y la estabilidad global.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
-  
+
+  <h2 class="text-center text-white mt-5 py-3" style="background-color: #00234c;">Criminales Más Buscados</h2>
+  <div class="container my-4">
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-4 mt-2">
+      <div class="col" *ngFor="let criminal of criminals | slice:0:4">
+        <div class="card border-0 shadow w-100 h-100" style="border-radius: 0;">
+          <img
+            src="/assets/CRIMINAL.png"
+            class="card-img-top img-fluid" alt="Imagen del criminal" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-start fw-bold mb-2">{{ criminal.name }}</h5>
+            <p class="card-text text-start">{{ criminal.charges }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <button class="btn w-100 btn-warning text-white" (click)="goToCriminals()">Ver todos los criminales</button>
+    </div>
+  </div>
+</div>
