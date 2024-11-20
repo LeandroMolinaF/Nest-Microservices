@@ -43,6 +43,7 @@ export class CriminalAddComponent {
     this.criminalService.createCriminal(criminal).subscribe({
       next: (response) => {
         console.log(response);
+        alert("Criminal registrado con exito")
         window.location.reload();
       },
       error: (error) => {

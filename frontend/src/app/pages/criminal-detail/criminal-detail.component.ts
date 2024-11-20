@@ -74,6 +74,7 @@ export class CriminalDetailComponent implements AfterViewInit {
       this.criminalService.updateCriminal(this.criminal.id, criminalEdit).subscribe(result => {
         console.log(result);
         this.isEditing = false;
+        alert("Datos editados correctamente")
         this.updateCriminals.emit(result);
       });
     }
